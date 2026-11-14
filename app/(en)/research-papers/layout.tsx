@@ -1,7 +1,9 @@
 import type { Metadata } from "next"
 import { siteConfig } from "@/app/metadata"
+import { faqPageJsonLd } from "@/lib/faq"
+import { researchPapersFaqs } from "@/lib/research-faqs"
 
-const title = "Swarms Research Papers — Published Work on Multi-Agent Systems"
+const title = "Swarms Research Papers: Published Work on Multi-Agent Systems"
 const description =
   "Published research papers from The Swarm Corporation covering multi-agent orchestration protocols, dynamic memory allocation, and large-scale agentic simulation."
 const url = "https://www.swarms.ai/research-papers"
@@ -82,24 +84,38 @@ const collectionJsonLd = {
       {
         "@type": "ScholarlyArticle",
         position: 1,
+        name: "AgentRearrange: Simplifying Multi-Agent Workflow Orchestration",
+        url: "https://github.com/The-Swarm-Corporation/AgentRearrange-Paper",
+      },
+      {
+        "@type": "ScholarlyArticle",
+        position: 2,
+        name: "GraphWorkflow: A Low-Overhead Compile-Once Graph Execution Engine for Multi-Agent Systems",
+        url: "https://github.com/The-Swarm-Corporation/GraphWorkflow-Paper",
+      },
+      {
+        "@type": "ScholarlyArticle",
+        position: 3,
         name: "ModelGrid: A Quantitative Framework for Dynamic Memory Allocation in Multi-Model Deployment",
         url: "https://github.com/The-Swarm-Corporation/ModelGrid",
       },
       {
         "@type": "ScholarlyArticle",
-        position: 2,
+        position: 4,
         name: "Agent Orchestration Protocol (AOP): A Distributed Framework for Large-Scale Multi-Agent Collaboration",
         url: "https://github.com/The-Swarm-Corporation/AOP-Paper",
       },
       {
         "@type": "ScholarlyArticle",
-        position: 3,
+        position: 5,
         name: "SenatorAssembly: A Multi-Agent Simulation Framework for Modeling US Senate Deliberative Processes",
         url: "https://github.com/The-Swarm-Corporation/SenatorAssembly-Paper",
       },
     ],
   },
 }
+
+const faqJsonLd = faqPageJsonLd(researchPapersFaqs)
 
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",
@@ -124,6 +140,10 @@ export default function ResearchPapersLayout({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       {children}
     </>

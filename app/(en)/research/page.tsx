@@ -3,16 +3,17 @@
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { PaperCard } from "@/components/paper-card"
+import { FaqSection } from "@/components/faq-section"
 import { ResearchHero } from "@/components/research/research-hero"
+import { researchFaqs } from "@/lib/research-faqs"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import {
   ArrowRight,
   ArrowUpRight,
   Brain,
-  Cpu,
-  Hospital,
-  Activity,
+  Globe,
+  Wrench,
   Workflow,
   Shuffle,
 } from "lucide-react"
@@ -70,28 +71,22 @@ const researchProjects = [
 
 const focusAreas = [
   {
+    icon: Globe,
+    title: "Agent Simulations",
+    description: "Populations of agents standing in for people, institutions and markets, so a system can be studied before it exists. SenatorAssembly, which models US Senate deliberation, is the first of these.",
+    focus: ["Legislative and Organizational Simulation", "Economic and Market Models", "Emergent Group Behavior"],
+  },
+  {
     icon: Brain,
-    title: "Multimodal AI",
-    description: "Models that integrate vision, language, and action modalities for comprehensive understanding and generation.",
-    focus: ["Vision-Language Models", "Action Prediction", "Cross-Modal Learning"],
+    title: "Multi-Agent Post Training (MAPT)",
+    description: "Training models after pretraining for work inside a swarm: handing off to other agents, following a shared plan and judging another agent's output. Progress is measured on team outcomes.",
+    focus: ["Collaboration-Aware Fine-Tuning", "Reinforcement Learning on Swarm Outcomes", "Role and Handoff Training"],
   },
   {
-    icon: Activity,
-    title: "Autonomous Systems",
-    description: "Fully autonomous systems capable of independent decision-making, coordination, and adaptation in complex environments.",
-    focus: ["Multi-Agent Coordination", "Decision Making", "Adaptive Systems"],
-  },
-  {
-    icon: Hospital,
-    title: "Domain Simulation",
-    description: "Realistic simulations of complex real-world systems including healthcare, organizations, and economies.",
-    focus: ["Healthcare Systems", "Organizational Dynamics", "Economic Models"],
-  },
-  {
-    icon: Cpu,
-    title: "System Optimization",
-    description: "Frameworks for efficient resource allocation, memory management, and computational optimization in distributed AI systems.",
-    focus: ["Resource Management", "Memory Allocation", "Scalable Computing"],
+    icon: Wrench,
+    title: "Multi-Agent Harness Engineering",
+    description: "The runtime around the models: workflow languages, graph execution, routing and gateways, memory and tool access. AgentRearrange, GraphWorkflow and RouteHub are this line of work, each measured against the alternatives.",
+    focus: ["Orchestration Primitives", "Execution Engines and Gateways", "Benchmarks and Reproducibility"],
   },
 ]
 
@@ -120,8 +115,8 @@ export default function ResearchPage() {
                 Active projects
               </h2>
               <p className="mt-5 text-base font-normal leading-relaxed text-white/50 sm:text-lg">
-                Past and present research in multi-agent collaboration and
-                multimodal intelligence.
+                Past and present research in multi-agent orchestration,
+                training and simulation.
               </p>
             </motion.div>
 
@@ -163,12 +158,13 @@ export default function ResearchPage() {
                 Research focus areas
               </h2>
               <p className="mt-5 text-base font-normal leading-relaxed text-white/50 sm:text-lg">
-                Core domains driving our research initiatives.
+                Three lines of work, from the systems that run agents to the
+                models that power them.
               </p>
             </motion.div>
 
             <motion.div
-              className="mx-auto grid max-w-7xl grid-cols-1 gap-px overflow-hidden rounded-lg border border-white/[0.08] bg-white/[0.08] sm:grid-cols-2 lg:grid-cols-4"
+              className="mx-auto grid max-w-7xl grid-cols-1 gap-px overflow-hidden rounded-lg border border-white/[0.08] bg-white/[0.08] md:grid-cols-3"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -206,6 +202,11 @@ export default function ResearchPage() {
           </div>
         </section>
 
+        <FaqSection
+          faqs={researchFaqs}
+          description="How the research program works, where the papers and code live, and how to get involved."
+        />
+
         {/* CTA */}
         <section className="bg-black">
           <div className="container px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-32">
@@ -221,8 +222,8 @@ export default function ResearchPage() {
                   Join our research team
                 </h2>
                 <p className="text-base font-normal leading-relaxed text-white/50 sm:text-lg">
-                  Help shape the future of autonomous systems and multimodal
-                  intelligence.
+                  Help build the simulations, training methods and harnesses
+                  behind large-scale multi-agent systems.
                 </p>
               </div>
               <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">

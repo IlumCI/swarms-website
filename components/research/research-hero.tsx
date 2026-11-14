@@ -51,8 +51,8 @@ export function ResearchHero() {
             Swarms Research
           </h1>
           <p className="mt-6 max-w-xl text-base font-normal leading-relaxed text-white/50 sm:mt-8 sm:text-lg">
-            Advancing multi-agent collaboration, multimodal intelligence, and large-scale agentic
-            simulation.
+            Agent simulations, multi-agent post training, and the harnesses that run
+            agents at scale.
           </p>
           <div className="pointer-events-auto mt-10 flex w-full flex-col items-center justify-center gap-3 sm:w-auto sm:flex-row">
             <Button

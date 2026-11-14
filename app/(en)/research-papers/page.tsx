@@ -3,6 +3,8 @@
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { PaperCard } from "@/components/paper-card"
+import { FaqSection } from "@/components/faq-section"
+import { researchPapersFaqs } from "@/lib/research-faqs"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import {
@@ -96,6 +98,11 @@ export default function ResearchPapersPage() {
             </div>
           </div>
         </section>
+
+        <FaqSection
+          faqs={researchPapersFaqs}
+          description="Where the PDFs, code and citations live, and how to follow new publications."
+        />
 
         {/* Call to Action */}
         <section className="bg-black">

@@ -1,9 +1,11 @@
 import type { Metadata } from "next"
 import { siteConfig } from "@/app/metadata"
+import { faqPageJsonLd } from "@/lib/faq"
+import { researchFaqs } from "@/lib/research-faqs"
 
-const title = "Swarms Research: RouteHub and GraphWorkflow Papers"
+const title = "Swarms Research: Agent Simulations, Multi-Agent Post Training and Harness Engineering"
 const description =
-  "Research papers from the Swarms team: RouteHub, a low-overhead SDK-native LLM gateway for agentic workloads, and GraphWorkflow, a compile-once graph execution engine for multi-agent systems."
+  "Research from the Swarms team across agent simulations, multi-agent post training (MAPT) and multi-agent harness engineering, with the AgentRearrange, RouteHub and GraphWorkflow papers."
 const url = "https://www.swarms.ai/research"
 
 export const metadata: Metadata = {
@@ -11,10 +13,13 @@ export const metadata: Metadata = {
   description,
   keywords: [
     "swarms research",
-    "routehub",
+    "agent simulations",
+    "multi-agent post training",
+    "MAPT",
+    "multi-agent harness engineering",
+    "agentrearrange paper",
     "routehub paper",
     "llm gateway",
-    "graphworkflow",
     "graphworkflow paper",
     "graph execution engine",
     "multi-agent systems",
@@ -111,6 +116,8 @@ const breadcrumbJsonLd = {
   ],
 }
 
+const faqJsonLd = faqPageJsonLd(researchFaqs)
+
 export default function ResearchLayout({
   children,
 }: {
@@ -125,6 +132,10 @@ export default function ResearchLayout({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       {children}
     </>
