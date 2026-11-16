@@ -424,7 +424,7 @@ Swarms Cloud bills every model at its provider's price plus a 15% service fee, o
 | Web search (`auto_search`) | $0.04 once per request that enables it |
 | Web scraper (`web_scraper`) | Free, only tokens are billed |
 | MCP servers | Free, only tokens are billed |
-| Image input | $0.25 per image |
+| Image input | $0.02 per image |
 | Night mode | 50% off tokens on swarm completions, 8 PM to 6 AM Pacific |
 
 At the time of writing, `gpt-5.4` costs $2.875 per million input tokens and $17.25 per million output tokens through Swarms (OpenAI's list price of $2.50 and $15.00 plus the fee), and `claude-sonnet-5` costs $2.30 and $11.50. Provider prices change, so look up any model's current price with `GET /v1/models/pricing?model_name=...`, or list every model with its price through `GET /v1/models/available`.

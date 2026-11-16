@@ -424,7 +424,7 @@ Swarms Cloud 对每个模型按其厂商价格加 15% 服务费计费，一把�
 | 网页搜索（`auto_search`） | 每个启用它的请求收取一次 $0.04 |
 | 网页抓取（`web_scraper`） | 免费，只按 token 计费 |
 | MCP 服务器 | 免费，只按 token 计费 |
-| 图片输入 | 每张图片 $0.25 |
+| 图片输入 | 每张图片 $0.02 |
 | 夜间模式 | 太平洋时间晚 8 点至早 6 点，swarm completions 的 token 费用五折 |
 
 撰写本文时，通过 Swarms 调用 `gpt-5.4` 的价格是每百万输入 token $2.875、每百万输出 token $17.25（即 OpenAI 标价 $2.50 和 $15.00 加上服务费），`claude-sonnet-5` 是 $2.30 和 $11.50。厂商价格会变动，所以请用 `GET /v1/models/pricing?model_name=...` 查询任意模型的当前价格，或通过 `GET /v1/models/available` 列出所有模型及其价格。

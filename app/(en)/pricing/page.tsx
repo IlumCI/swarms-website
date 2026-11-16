@@ -136,7 +136,7 @@ const usageItems = [
   {
     icon: ImageIcon,
     item: "Image processing",
-    cost: "$0.25",
+    cost: "$0.02",
     unit: "per image",
     note: "Each image sent to an agent",
   },
@@ -223,7 +223,7 @@ const faqs = [
   {
     question: "How does usage-based pricing work?",
     answer:
-      "Credits are deducted automatically after each request. Tokens are billed at each model's provider price plus a 15% service fee, and a swarm that mixes models bills each agent at its own model. Flat fees apply on top: $0.01 per agent on swarm, graph and grid workflows, $0.25 per image, and $0.04 per request that enables web search. Free credits are consumed before paid credits.",
+      "Credits are deducted automatically after each request. Tokens are billed at each model's provider price plus a 15% service fee, and a swarm that mixes models bills each agent at its own model. Flat fees apply on top: $0.01 per agent on swarm, graph and grid workflows, $0.02 per image, and $0.04 per request that enables web search. Free credits are consumed before paid credits.",
   },
   {
     question: "How much does a specific model cost?",
@@ -263,7 +263,7 @@ const faqs = [
   {
     question: "How is image processing charged?",
     answer:
-      "Each image sent to an agent, in img or imgs, is billed at $0.25 on top of the tokens. This applies on every plan.",
+      "Each image sent to an agent, in img or imgs, is billed at $0.02 on top of the tokens. This applies on every plan.",
   },
   {
     question: "Do MCP servers or tools cost extra?",

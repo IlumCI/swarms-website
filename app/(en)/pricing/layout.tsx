@@ -120,7 +120,7 @@ const faqJsonLd = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "Credits are deducted automatically after each request. Tokens are billed at each model's provider price plus a 15% service fee, and a swarm that mixes models bills each agent at its own model. Flat fees apply on top: $0.01 per agent on swarm, graph and grid workflows, $0.25 per image, and $0.04 per request that enables web search. Free credits are consumed before paid credits.",
+          "Credits are deducted automatically after each request. Tokens are billed at each model's provider price plus a 15% service fee, and a swarm that mixes models bills each agent at its own model. Flat fees apply on top: $0.01 per agent on swarm, graph and grid workflows, $0.02 per image, and $0.04 per request that enables web search. Free credits are consumed before paid credits.",
       },
     },
     {
