@@ -21,7 +21,7 @@ Three line items make up a swarm request:
 
 - **Agent fee:** $0.01 per agent in the request. Three agents, three cents. Agents on OpenRouter free models are exempt.
 - **Tokens:** each agent's input and output tokens at its own model's price, plus a 15% service fee. `GET /v1/models/pricing?model_name=...` returns the current rate with the fee already included.
-- **Extras only if you use them:** $0.25 per image, $0.04 per request that enables the `auto_search` web search tool. MCP servers and the `web_scraper` tool are free apart from tokens.
+- **Extras only if you use them:** $0.02 per image, $0.04 per request that enables the `auto_search` web search tool. MCP servers and the `web_scraper` tool are free apart from tokens.
 
 Single-agent calls to `/v1/agent/completions` have no agent fee, only tokens. Paid plans get a night-time discount of 50% off token costs on swarm completions between 8pm and 6am Pacific, which matters for batch work you can schedule.
 
@@ -275,7 +275,7 @@ On the Swarms API, a three-agent swarm on a mixed set of small and mid-size mode
 
 ### What is the Swarms API pricing model?
 
-$0.01 per agent per swarm request, plus each agent's tokens at its model's price with a 15% service fee. Single-agent completions have no agent fee. Images are $0.25 each and web search is $0.04 per request that enables it. Paid plans get 50% off swarm token costs between 8pm and 6am Pacific.
+$0.01 per agent per swarm request, plus each agent's tokens at its model's price with a 15% service fee. Single-agent completions have no agent fee. Images are $0.02 each and web search is $0.04 per request that enables it. Paid plans get 50% off swarm token costs between 8pm and 6am Pacific.
 
 ### Which multi-agent architecture is cheapest?
 
